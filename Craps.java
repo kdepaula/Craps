@@ -1,16 +1,11 @@
 /**
-/**
  * @author Katelyn DePaula
- *
+ * AP Computer Science Period 7 Craps Game
  */
 import java.util.Scanner;
 
 public class Craps 
 {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) 
 	{
 		Scanner in = new Scanner(System.in);
@@ -18,13 +13,13 @@ public class Craps
 		String playAgain = "yes";
 		while (playAgain.equals("yes")) 
 		{
-			System.out.println("Click enter to roll");
+			System.out.println("This is the game of Craps. Click enter to roll.");
 			in.nextLine();
 			Dice die1 = new Dice();
 			Dice die2 = new Dice();
 			int roll1 = die1.roll();
 			int roll2 = die2.roll();
-			System.out.println("Die 1: " + roll1 + "\tDie 2: " + roll2);
+			System.out.println(die1.display() + die2.display());
 			if ((roll1 + roll2) == 2 || (roll1 + roll2) == 12) 
 			{
 				System.out.println("You lose.");
@@ -42,11 +37,11 @@ public class Craps
 			else 
 			{
 				point = roll1 + roll2;
-				System.out.println("Your point is " + point + "\nClick enter to roll again");
+				System.out.println("Your point is " + point + "\nClick enter to roll again.");
 				in.nextLine();
 				roll1 = die1.roll();
 				roll2 = die2.roll();
-				System.out.println("Die 1: " + roll1 + "\tDie 2: " + roll2);
+				System.out.println(die1.display() + die2.display());
 				
 				while (point != (roll1 + roll2) && (roll1 + roll2) != 7) 
 					{
@@ -54,7 +49,7 @@ public class Craps
 						in.nextLine();
 						roll1 = die1.roll();
 						roll2 = die2.roll();
-						System.out.println("Die 1: " + roll1 + "\tDie 2: " + roll2);
+						System.out.println(die1.display() + die2.display());
 					}
 					
 					if ((roll1 + roll2) == 7) 
@@ -82,8 +77,10 @@ public class Craps
 							System.out.println("Thanks for playing Craps.");
 					}
 				
-				}
-
 			}
+
 		}
-} 
+	}
+}
+
+
