@@ -1,4 +1,3 @@
-
 /**
 /**
  * @author Katelyn DePaula
@@ -87,7 +86,4 @@ public class Craps
 
 			}
 		}
-
-}
-
-
+} 
